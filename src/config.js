@@ -1,3 +1,3 @@
 export default {
-  base: '/web/',
+  base: '/websites-clone/',
 }

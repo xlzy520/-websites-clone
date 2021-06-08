@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "cross-env NODE_ENV=production vite build"
+    "build": "cross-env NODE_ENV=production vite build",
+    "preview": "vite build && vite preview"
   },
   "dependencies": {
     "@vue/composition-api": "^1.0.0-rc.11",
