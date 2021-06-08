@@ -1,13 +1,43 @@
-import gravity1 from './pages/gravity1.vue'
-import gravity2 from './pages/gravity2.vue'
-import gravity3 from './pages/gravity3.vue'
+import Home from './pages/Home.vue'
 
-const prefix = 'gravity'
-
-const DNARoutes = [
-  { path: '\u0020', name: 'gravity1', component: gravity1 },
-  { path: '\u0009', name: 'gravity2', component: gravity2 },
-  { path: '\u000A', name: 'gravity3', component: gravity3 }
+const Routes = [
+  {
+    path: 'home', name: 'home', component: Home,
+  }
 ]
 
-export default DNARoutes
+// export default new Router({
+//   mode: 'history',
+//   routes: [
+//     {
+//       path: "*",
+//       redirect: "/404"
+//     },
+//     {
+//       path: '/',
+//       name: 'home',
+//       redirect:'/CloudDisk',
+//       component: Home
+//     },
+//     {
+//       path: '/CloudDisk',
+//       name: 'CloudDisk',
+//       component: Home
+//     },
+//     {
+//       path: '/CloudMusic',
+//       name: 'CloudMusic',
+//       component: Home
+//     },
+//     {
+//       path: '/404',
+//       name:"找不到的作品",
+//       component: () => import('./views/404.vue'),
+//       meta: {
+//         title: "404"
+//       }
+//     },
+//   ]
+// })
+
+export default Routes

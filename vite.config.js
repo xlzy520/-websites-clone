@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import ViteComponents from 'vite-plugin-components'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
+import baseConfig from '@/config'
 
 const path = require('path')
 
@@ -39,6 +40,7 @@ const config = defineConfig({
   server: {
     port: 9930,
   },
+  base: baseConfig.base,
 })
 
 export default config
