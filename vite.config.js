@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import ViteComponents from 'vite-plugin-components'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
-import baseConfig from '@/config'
+import baseConfig from './src/config'
 
 const path = require('path')
 

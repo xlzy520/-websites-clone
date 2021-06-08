@@ -3,18 +3,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import logoImg from '../assets/logo.png'
+import { useImportPath } from '@/utils'
 
-const logo = logoImg
-// export default defineComponent({
-//   name: 'logo',
-//   computed: {
-//     logo() {
-//       return require('../assets/img/' + this.$route.name + '/logo.png')
-//     },
-//   },
-// })
+const logo = useImportPath('img/CloudDisk/logo.png')
 </script>
 
 <style scoped>
