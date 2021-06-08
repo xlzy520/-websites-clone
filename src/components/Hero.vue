@@ -1,6 +1,7 @@
 <template>
   <section
-    class="container flex flex-col items-center px-5 py-12 mx-auto text-gray-600 body-font md:flex-row"
+    class="container flex flex-col items-center px-5 py-12 mx-auto text-gray-600
+    body-font md:flex-row"
   >
     <div class="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0">
       <img
@@ -10,8 +11,10 @@
       />
     </div>
     <div
-      class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left"
+      class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16
+      md:items-start md:text-left"
     >
+      {{name}}- {{hh}}
       <Heading1> Vite ⚡ - Vue 2 starter template </Heading1>
       <p class="mb-8 leading-relaxed dark:text-gray-300">
         This example project shows how to speed up your Vue 2 application with
@@ -29,3 +32,26 @@
     </div>
   </section>
 </template>
+
+<script>
+import {
+  computed, reactive, ref, defineComponent,
+} from 'vue'
+import { useDark, useToggle } from '@vueuse/core'
+
+export default defineComponent({
+  setup() {
+    const count = ref(100)
+    const user = reactive({ name: 'lzy' })
+    const hh = computed(() => count.value + 1)
+    const name = computed(() => user.name)
+
+    const isDark = useDark()
+    const toggle = useToggle(isDark)
+
+    return {
+      user, toggle, isDark, hh, name,
+    }
+  },
+})
+</script>

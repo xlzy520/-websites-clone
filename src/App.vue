@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="text-center text-3xl font-bold dark:text-white">Vue2 写法</div>
+    <div class="text-center text-3xl font-bold dark:text-white">Vue2 Options 写法</div>
     <div class="text-center dark:text-white mt-4">{{name}}, {{key}}</div>
     <main>
       <RouterView />

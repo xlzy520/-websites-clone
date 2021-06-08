@@ -1,10 +1,11 @@
-import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // import { createVuePlugin } from "vite-plugin-vue2";
 import ViteComponents from 'vite-plugin-components'
 import WindiCSS from 'vite-plugin-windicss'
 import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
+
+const path = require('path')
 
 const config = defineConfig({
   resolve: {
@@ -21,6 +22,8 @@ const config = defineConfig({
     vue(),
     // createVuePlugin(),
     ViteComponents({
+      dirs: ['packages/*', 'src/components'],
+      deep: true,
       customComponentResolvers: [
         ViteIconsResolver({
           componentPrefix: 'icon',
